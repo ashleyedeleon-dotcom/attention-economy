@@ -6,191 +6,192 @@
   <title>Attention Economy Calculator</title>
   <style>
     body {
-  font-family: system-ui, sans-serif;
-  background: #fff;
-  color: #111;
-  padding: 1rem 1.5rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-}
-.slider-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.5rem;
-}
-.slider-label {
-  font-size: 14px;
-  color: #555;
-  white-space: nowrap;
-}
-.hours-display {
-  font-size: 22px;
-  font-weight: 500;
-  min-width: 80px;
-  text-align: right;
-}
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 1.5rem;
-}
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: #888;
-}
-.legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.section-label {
-  font-size: 11px;
-  font-weight: 500;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0 0 12px;
-}
-.platform-card {
-  background: #fff;
-  border: 0.5px solid #ddd;
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 12px;
-}
-.platform-name {
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0 0 4px;
-}
-.platform-stat {
-  font-size: 12px;
-  color: #888;
-  margin: 0 0 10px;
-}
-.bar-track {
-  background: #f0f0f0;
-  border-radius: 999px;
-  height: 10px;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 6px;
-}
-.bar-fill {
-  height: 100%;
-  border-radius: 999px;
-  transition: width 0.25s ease;
-}
-.value-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.value-label {
-  font-size: 12px;
-  color: #888;
-}
-.value-num {
-  font-size: 20px;
-  font-weight: 500;
-}
-.total-card {
-  background: #f5f5f5;
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-.total-label {
-  font-size: 13px;
-  color: #888;
-}
-.total-value {
-  font-size: 22px;
-  font-weight: 500;
-}
-.methodology {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 0.5px solid #ddd;
-  font-size: 13px;
-  color: #555;
-  line-height: 1.7;
-}
-.methodology p {
-  margin: 0 0 1rem;
-}
-.math-block {
-  background: #f9f9f9;
-  border-left: 3px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem 1.25rem;
-  margin: 0 0 1.5rem;
-  font-size: 13px;
-  color: #444;
-}
-.math-block ul {
-  margin: 0 0 1rem;
-  padding-left: 1.2rem;
-}
-.math-block li {
-  margin-bottom: 4px;
-  line-height: 1.6;
-}
-.math-title {
-  font-size: 11px;
-  font-weight: 500;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0 0 12px !important;
-}
-.math-platform {
-  font-size: 13px;
-  font-weight: 500;
-  color: #111;
-  margin: 0 0 6px !important;
-}
-.sources-label {
-  font-size: 11px;
-  font-weight: 500;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 1rem 0 8px !important;
-}
-.sources-list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-.sources-list li {
-  margin-bottom: 4px;
-}
-.sources-list a {
-  color: #3266ad;
-  text-decoration: none;
-}
-.sources-list a:hover {
-  text-decoration: underline;
-}
+      font-family: system-ui, sans-serif;
+      background: #fff;
+      color: #111;
+      padding: 1rem 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .slider-label {
+      font-size: 14px;
+      color: #555;
+      white-space: nowrap;
+    }
+    .hours-display {
+      font-size: 22px;
+      font-weight: 500;
+      min-width: 80px;
+      text-align: right;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 1.5rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #888;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 12px;
+    }
+    .platform-card {
+      background: #fff;
+      border: 0.5px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 12px;
+    }
+    .platform-name {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 0 4px;
+    }
+    .platform-stat {
+      font-size: 12px;
+      color: #888;
+      margin: 0 0 10px;
+    }
+    .bar-track {
+      background: #f0f0f0;
+      border-radius: 999px;
+      height: 10px;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+    .value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .value-label {
+      font-size: 12px;
+      color: #888;
+    }
+    .value-num {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .total-card {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .total-label {
+      font-size: 13px;
+      color: #888;
+    }
+    .total-value {
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .methodology {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid #ddd;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .methodology p {
+      margin: 0 0 1rem;
+    }
+    .math-block {
+      background: #f9f9f9;
+      border-left: 3px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin: 0 0 1.5rem;
+      font-size: 13px;
+      color: #444;
+    }
+    .math-block ul {
+      margin: 0 0 1rem;
+      padding-left: 1.2rem;
+    }
+    .math-block li {
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+    .math-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 12px !important;
+    }
+    .math-platform {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111;
+      margin: 0 0 6px !important;
+    }
+    .sources-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 1rem 0 8px !important;
+    }
+    .sources-list {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .sources-list li {
+      margin-bottom: 4px;
+    }
+    .sources-list a {
+      color: #3266ad;
+      text-decoration: none;
+    }
+    .sources-list a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h2 class="sr-only">Attention economy calculator: how much value you generate for social media platforms per hour</h2>
+
+<h2 class="sr-only">Attention economy calculator: how much value you generate for social media platforms per hour</h2>
 
 <div style="padding: 1rem 0 0;">
   <div class="slider-row">
@@ -200,8 +201,8 @@
   </div>
 
   <div class="legend">
-    <div class="legend-item"><div class="legend-dot" style="background:#3266ad;"></div>Daily value</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#e05a5a;"></div>Yearly value</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3266ad;"></div>Meta daily value</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#e05a5a;"></div>TikTok daily value</div>
   </div>
 
   <div class="section-label">Value generated from usage on each platform</div>
@@ -214,7 +215,7 @@
 
   <div class="methodology">
     <p>
-      The revenue-per-hour figures in this calculator are estimated by dividing each platform's annual average revenue per user (ARPU)–the total revenue a platform earns divided by its number of users–by the average number of hours that users spend on the app each year. That second number, the time-spent figure, comes from platform-specific daily usage averages: Meta users spend an average of 63 minutes per day acros the platform, and TikTok users spend an average of 95 minutes per day globally. These are global averages across all age groups and regions, meaning younger or more active users will generate significantly more value per year. Meta's ARPU of $57.03 is drawn directly from their 10K public filing. TikTok's ARPU of $16.40 required independent calculation, because TikTok is a private company and does not publicly disclose its ARPU, it was estimated by dividing its projected 2026 global revenue of $32.8 billion by its global monthly active user base of approximately 2 billion users. All figures are global estimates and vary by region, device, and demographic, but they reflect the most current publicly available data on how platforms convert user attention into advertising revenue. For the purposes of this model, the maximum daily engagement is set at 12 hours to maintain a (hopefully) realistic upper bound for active platform usage.
+      The revenue-per-hour figures in this calculator are estimated by dividing each platform's annual average revenue per user (ARPU)–the total revenue a platform earns divided by its number of users–by the average number of hours that users spend on the app each year. That second number, the time-spent figure, comes from platform-specific daily usage averages: Meta users spend an average of 63 minutes per day across the platform, and TikTok users spend an average of 95 minutes per day globally. These are global averages across all age groups and regions, meaning younger or more active users will generate significantly more value per year. Meta's ARPU of $57.03 is drawn directly from their 10K public filing. TikTok's ARPU of $16.40 required independent calculation, because TikTok is a private company and does not publicly disclose its ARPU — it was estimated by dividing its projected 2026 global revenue of $32.8 billion by its global monthly active user base of approximately 2 billion users. All figures are global estimates and vary by region, device, and demographic, but they reflect the most current publicly available data on how platforms convert user attention into advertising revenue. For the purposes of this model, the maximum daily engagement is set at 12 hours to maintain a realistic upper bound for active platform usage.
     </p>
 
     <div class="math-block">
@@ -222,7 +223,7 @@
 
       <p class="math-platform">Instagram / Meta</p>
       <ul>
-        <li>Global ARPU: $57.03/yr </li>
+        <li>Global ARPU: $57.03/yr (FY2025 public filing)</li>
         <li>Avg daily time: 63 min = 1.05 hrs/day</li>
         <li>Hours per year: 1.05 × 365 = 383.25 hrs/year</li>
         <li>Revenue per hour: $57.03 ÷ 383.25 = <strong>≈ $0.15/hr</strong></li>
@@ -233,7 +234,7 @@
         <li>Projected Global Revenue (2026): ≈ $32.8 billion</li>
         <li>Global Monthly Active Users: ≈ 1.9 to 2.04 billion</li>
         <li>The math: $32,800,000,000 ÷ 2,000,000,000 = <strong>$16.40 Global ARPU</strong></li>
-        <li>Note: TikTok is a private company and does not publicly disclose ARPU, this figure is an estimate based on projected revenue and user base.</li>
+        <li>Note: TikTok is a private company and does not publicly disclose ARPU — this figure is an estimate based on projected revenue and user base.</li>
         <li>Avg daily time: 95 min = 1.58 hrs/day</li>
         <li>Hours per year: 1.58 × 365 = 576.7 hrs/year</li>
         <li>Revenue per hour: $16.40 ÷ 576.7 = <strong>≈ $0.03/hr</strong></li>
@@ -251,59 +252,59 @@
   </div>
 </div>
 
+<script>
+  const platforms = [
+    { name: "Instagram / Meta", revenuePerHour: 0.15, color: "#3266ad", desc: "~$0.15/hr · ARPU $57.03/yr · avg 63 min/day" },
+    { name: "TikTok",           revenuePerHour: 0.03, color: "#e05a5a", desc: "~$0.03/hr · ARPU ~$16.40/yr · avg 95 min/day" },
+  ];
 
-  <script>
-    const platforms = [
-  { name: "Instagram / Meta", revenuePerHour: 0.15, color: "#3266ad", desc: "~$0.15/hr · ARPU $57.03/yr · avg 63 min/day" },
-  { name: "TikTok",           revenuePerHour: 0.03, color: "#e05a5a", desc: "~$0.03/hr · ARPU ~$16.40/yr · avg 95 min/day" },
-];
+  function render(hours) {
+    const container = document.getElementById('platform-cards');
+    container.innerHTML = '';
+    let totalYear = 0;
 
-const maxRPH = Math.max(...platforms.map(p => p.revenuePerHour));
+    const maxDaily = Math.max(...platforms.map(p => p.revenuePerHour * hours));
 
-function render(hours) {
-  const container = document.getElementById('platform-cards');
-  container.innerHTML = '';
-  let totalYear = 0;
+    platforms.forEach(p => {
+      const daily = p.revenuePerHour * hours;
+      const yearly = daily * 365;
+      totalYear += yearly;
+      const barPct = maxDaily > 0 ? (daily / maxDaily) * 100 : 0;
 
-  platforms.forEach(p => {
-    const daily = p.revenuePerHour * hours;
-    const yearly = daily * 365;
-    totalYear += yearly;
-    const barPct = maxRPH > 0 ? (p.revenuePerHour / maxRPH) * 100 : 0;
-    const card = document.createElement('div');
-    card.className = 'platform-card';
-    card.innerHTML = `
-      <p class="platform-name">${p.name}</p>
-      <p class="platform-stat">${p.desc}</p>
-      <div class="bar-track"><div class="bar-fill" style="width:${barPct}%; background:${p.color};"></div></div>
-      <div class="value-row">
-        <div>
-          <div class="value-label">Daily value generated</div>
-          <div class="value-num">$${daily.toFixed(2)}</div>
+      const card = document.createElement('div');
+      card.className = 'platform-card';
+      card.innerHTML = `
+        <p class="platform-name">${p.name}</p>
+        <p class="platform-stat">${p.desc}</p>
+        <div class="bar-track"><div class="bar-fill" style="width:${barPct}%; background:${p.color};"></div></div>
+        <div class="value-row">
+          <div>
+            <div class="value-label">Daily value generated</div>
+            <div class="value-num">$${daily.toFixed(2)}</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="value-label">Yearly</div>
+            <div class="value-num" style="color:${p.color};">$${yearly.toFixed(2)}</div>
+          </div>
         </div>
-        <div style="text-align:right;">
-          <div class="value-label">Yearly</div>
-          <div class="value-num" style="color:${p.color};">$${yearly.toFixed(2)}</div>
-        </div>
-      </div>
-    `;
-    container.appendChild(card);
+      `;
+      container.appendChild(card);
+    });
+
+    document.getElementById('total-year').textContent = '$' + totalYear.toFixed(2);
+  }
+
+  const slider = document.getElementById('hours-slider');
+  const hoursOut = document.getElementById('hours-out');
+
+  slider.addEventListener('input', () => {
+    const h = parseFloat(slider.value);
+    hoursOut.textContent = h === 1 ? '1 hr' : h + ' hrs';
+    render(h);
   });
 
-  document.getElementById('total-year').textContent = '$' + totalYear.toFixed(2);
-}
+  render(3);
+</script>
 
-const slider = document.getElementById('hours-slider');
-const hoursOut = document.getElementById('hours-out');
-
-slider.addEventListener('input', () => {
-  const h = parseFloat(slider.value);
-  hoursOut.textContent = h === 1 ? '1 hr' : h + ' hrs';
-  render(h);
-});
-
-render(3);
-  </script>
 </body>
 </html>
-
